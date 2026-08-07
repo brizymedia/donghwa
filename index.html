@@ -19,7 +19,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Noto Sans KR',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;overflow-x:hidden}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;overflow-x:hidden;word-break:keep-all}
 h1,h2,h3,.disp{font-family:'Jua',sans-serif;font-weight:400;letter-spacing:.01em}
 .serif{font-family:'Gowun Dodum',sans-serif}
 img{max-width:100%;display:block}
@@ -46,7 +46,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .hero h1{font-size:clamp(2.1rem,5vw,3.2rem);color:var(--blue-900);line-height:1.32;margin-bottom:18px}
 .hero h1 em{font-style:normal;color:var(--blue-600);position:relative}
 .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:12px;background:var(--yellow);z-index:-1;border-radius:6px}
-.hero p.lead{font-size:1.12rem;color:var(--ink-soft);margin-bottom:30px;max-width:460px}
+.hero p.lead{font-size:1.12rem;color:var(--ink-soft);margin-bottom:30px;max-width:540px}
 .btn-row{display:flex;gap:14px;flex-wrap:wrap}
 .btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:999px;padding:16px 34px;font-size:1.05rem;transition:.2s}
 .btn-primary{background:var(--blue-600);color:#fff;box-shadow:0 8px 22px rgba(43,138,196,.4)}
@@ -216,7 +216,7 @@ footer a{color:var(--blue-200)}
     <div>
       <span class="hero-badge">🌟 우리아이를 동화의 주인공으로 만들어 드립니다!</span>
       <h1>우리 아이만을 위한<br><em>특별한 동화</em>를<br>만들어 드립니다</h1>
-      <p class="lead serif">아이의 특징을 알려주시면, 아이의 캐릭터를 생성해 우리 아이가 주인공으로 등장하는 동화를 만들어 드립니다.</p>
+      <p class="lead serif">아이의 특징을 알려주시면, 아이의 캐릭터를 생성해<br>우리 아이가 주인공으로 등장하는 동화를 만들어 드립니다.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="#apply">지금 신청하기 ✍️</a>
         <a class="btn btn-ghost" href="#why">서비스 알아보기</a>
