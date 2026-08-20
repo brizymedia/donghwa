@@ -491,8 +491,11 @@ footer a{color:var(--blue-200)}
       </fieldset>
 
       <fieldset>
-        <legend><span class="no">2</span>아이의 이름은 무엇인가요? <span class="req" style="font-size:.9rem">*</span></legend>
-        <div class="frow single"><div class="fgroup"><input type="text" id="cName" name="아이 이름" required placeholder="예) 김소은"></div></div>
+        <legend><span class="no">2</span>아이의 이름과 나이를 알려주세요 <span class="req" style="font-size:.9rem">*</span></legend>
+        <div class="frow">
+          <div class="fgroup"><label class="flabel" for="cName">이름 <span class="req">*</span></label><input type="text" id="cName" name="아이 이름" required placeholder="예) 김소은"></div>
+          <div class="fgroup"><label class="flabel" for="cAge">나이 <span class="req">*</span></label><input type="text" id="cAge" name="아이 나이" required inputmode="numeric" placeholder="예) 6살 (만 나이)"></div>
+        </div>
       </fieldset>
 
       <fieldset>
@@ -750,7 +753,8 @@ document.getElementById('applyForm').addEventListener('submit', function(e){
     ['보호자 성함', 'input[name="보호자 성함"]'],
     ['휴대폰', 'input[name="휴대폰"]'],
     ['이메일', 'input[name="이메일"]'],
-    ['아이 이름', 'input[name="아이 이름"]']
+    ['아이 이름', 'input[name="아이 이름"]'],
+    ['아이 나이', 'input[name="아이 나이"]']
   ];
   for (var i=0;i<required.length;i++){
     var el = form.querySelector(required[i][1]);
@@ -779,6 +783,7 @@ document.getElementById('applyForm').addEventListener('submit', function(e){
   lines.push('');
   lines.push('■ 아이 정보');
   lines.push(' · 이름: '+val('input[name="아이 이름"]'));
+  lines.push(' · 나이: '+val('input[name="아이 나이"]'));
   lines.push(' · 성별: '+gender);
   var photo = form.querySelector('input[name="사진 제출 의향"]:checked');
   lines.push(' · 사진 제출 의향: '+(photo?photo.value:'-'));
